@@ -19,6 +19,7 @@ The solution implemented to overcome looping:
 <br />
 
 ## Instructions to Run: 
+In project directionary, on terminal run: 
 ```
 g++ settings.h packet.h router.h
 g++ driver.cpp -o driver
