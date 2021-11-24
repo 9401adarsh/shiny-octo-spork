@@ -118,7 +118,7 @@ int main()
     router1.receive(dataPacket2);
 
     */
-    cout<<"Flooding Routing Algorithm - Controlled (Packets only forwarded once to prevent looping)"<<endl;
+    std::cout<<"Flooding Routing Algorithm - Controlled (Packets only forwarded once to prevent looping)"<<std::endl;
     extern int numOfTransmissions;
 
     makeAndrun();

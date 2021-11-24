@@ -23,7 +23,7 @@ class packet{
         }
         packet(T &payLoad, std::string dest_ip_addr)
         {
-            thishops = settings._defaultHopCount;
+            this->hops = settings._defaultHopCount;
             packet_id = packetIDseq++;
             payload = payLoad;
             destination_IP = dest_ip_addr;
