@@ -1,0 +1,151 @@
+Flooding Routing Algorithm
+-----------------------
+Status: In Transit.
+Router: R1(192.168.10.1)
+Packet with ID: 1
+Origin: 
+Rem Hops: 4
+-----------------------
+-----------------------
+Status: In Transit.
+Router: R4(192.168.40.1)
+Packet with ID: 1
+Origin: R1(192.168.10.1)
+Rem Hops: 3
+-----------------------
+-----------------------
+Status: In Transit.
+Router: R6(192.168.60.1)
+Packet with ID: 1
+Origin: R4(192.168.40.1)
+Rem Hops: 2
+-----------------------
+-----------------------
+Status: Received.
+Router: R7(192.168.70.1)
+Packet with ID: 1
+Origin: R6(192.168.60.1)
+Payload: 30 - An Album by Adele
+-----------------------
+-----------------------
+Resuming Simulation....
+
+-----------------------
+Status: In Transit.
+Router: R5(192.168.50.1)
+Packet with ID: 1
+Origin: R4(192.168.40.1)
+Rem Hops: 2
+-----------------------
+-----------------------
+Status: Received.
+Router: R7(192.168.70.1)
+Packet with ID: 1
+Origin: R5(192.168.50.1)
+Payload: 30 - An Album by Adele
+-----------------------
+-----------------------
+Resuming Simulation....
+
+-----------------------
+Status: In Transit.
+Router: R3(192.168.30.1)
+Packet with ID: 1
+Origin: R4(192.168.40.1)
+Rem Hops: 2
+-----------------------
+-----------------------
+Status: Received.
+Router: R7(192.168.70.1)
+Packet with ID: 1
+Origin: R3(192.168.30.1)
+Payload: 30 - An Album by Adele
+-----------------------
+-----------------------
+Resuming Simulation....
+
+-----------------------
+Status: In Transit.
+Router: R2(192.168.20.1)
+Packet with ID: 1
+Origin: R3(192.168.30.1)
+Rem Hops: 1
+-----------------------
+-----------------------
+Status: Received.
+Router: R7(192.168.70.1)
+Packet with ID: 1
+Origin: R2(192.168.20.1)
+Payload: 30 - An Album by Adele
+-----------------------
+-----------------------
+Resuming Simulation....
+
+-----------------------
+Status: Discarded (Hop Count = 0).
+Router: R1(192.168.10.1)
+Packet with ID: 1
+Origin: R2(192.168.20.1)
+-----------------------
+-----------------------
+Status: In Transit.
+Router: R2(192.168.20.1)
+Packet with ID: 1
+Origin: R1(192.168.10.1)
+Rem Hops: 3
+-----------------------
+-----------------------
+Status: Received.
+Router: R7(192.168.70.1)
+Packet with ID: 1
+Origin: R2(192.168.20.1)
+Payload: 30 - An Album by Adele
+-----------------------
+-----------------------
+Resuming Simulation....
+
+-----------------------
+Status: In Transit.
+Router: R3(192.168.30.1)
+Packet with ID: 1
+Origin: R2(192.168.20.1)
+Rem Hops: 2
+-----------------------
+-----------------------
+Status: Received.
+Router: R7(192.168.70.1)
+Packet with ID: 1
+Origin: R3(192.168.30.1)
+Payload: 30 - An Album by Adele
+-----------------------
+-----------------------
+Resuming Simulation....
+
+-----------------------
+Status: In Transit.
+Router: R4(192.168.40.1)
+Packet with ID: 1
+Origin: R3(192.168.30.1)
+Rem Hops: 1
+-----------------------
+-----------------------
+Status: Discarded (Hop Count = 0).
+Router: R6(192.168.60.1)
+Packet with ID: 1
+Origin: R4(192.168.40.1)
+-----------------------
+-----------------------
+Status: Discarded (Hop Count = 0).
+Router: R5(192.168.50.1)
+Packet with ID: 1
+Origin: R4(192.168.40.1)
+-----------------------
+-----------------------
+Status: Discarded (Hop Count = 0).
+Router: R1(192.168.10.1)
+Packet with ID: 1
+Origin: R4(192.168.40.1)
+-----------------------
+
+Simulation is Over!! 
+The number of transmissions is 18
