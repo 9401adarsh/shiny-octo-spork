@@ -76,8 +76,9 @@ void makeAndrun()
 
 int main()
 {
-    /*
-    router router1, router2, router3, router4, router5, router6, router7;
+    std::cout<<"Flooding Routing Algorithm - Controlled (Packets only forwarded once to prevent looping)"<<std::endl;
+    extern int numOfTransmissions;
+   /* router router1, router2, router3, router4, router5, router6, router7;
 
     std::string msg1 = "Ole's at the wheel!";
     packet<std::string> dataPacket1;
@@ -118,11 +119,8 @@ int main()
     router1.receive(dataPacket2);
 
     */
-    std::cout<<"Flooding Routing Algorithm - Controlled (Packets only forwarded once to prevent looping)"<<std::endl;
-    extern int numOfTransmissions;
-
-    makeAndrun();
     
+    makeAndrun();
     std::cout<<std::endl;
     std::cout<<"Simulation is Over!! "<<std::endl;
     std::cout<<"The number of transmissions is "<<numOfTransmissions<<std::endl;
