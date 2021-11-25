@@ -79,49 +79,7 @@ int main()
     freopen("input.in", "r", stdin);
     std::cout<<"Flooding Routing Algorithm"<<std::endl;
     extern int numOfTransmissions;
-   /* router router1, router2, router3, router4, router5, router6, router7;
-
-    std::string msg1 = "Ole's at the wheel!";
-    packet<std::string> dataPacket1;
-    dataPacket1.setPayload(msg1);
-    dataPacket1.setOrigin("Host");
-    dataPacket1.setDestIP("Router-3");
-
-    std::string msg2 = "Carrick's at the wheel!";
-    packet<std::string> dataPacket2;
-    dataPacket2.setPayload(msg2);
-    dataPacket2.setOrigin("Host");
-    dataPacket2.setDestIP("Router-4");
     
-
-    extern int numOfTransmissions;
-
-    router1 = *new router("Router-1");
-    router2 = *new router("Router-2");
-    router3 = *new router("Router-3");
-    router4 = *new router("Router-4");
-    router5 = *new router("Router-5");
-
-    router1.makeNewConnection(router2);
-    //router2.makeNewConnection(router1);
-
-    router1.makeNewConnection(router3);
-    //router3.makeNewConnection(router1);
-    
-    router2.makeNewConnection(router4);
-    //router4.makeNewConnection(router2);
-    
-    router2.makeNewConnection(router5);
-    //router5.makeNewConnection(router2);
-
-    router4.makeNewConnection(router5);
-
-    router1.receive(dataPacket1);
-    router1.receive(dataPacket2);
-
-    */
-    
-
     makeAndrun();
     std::cout<<std::endl;
     std::cout<<"Simulation is Over!! "<<std::endl;
