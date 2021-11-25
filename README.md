@@ -63,5 +63,9 @@ g++ driver.cpp -o driver
         static const int _defaultHopCount = <new_Value>;
 ```
 
+<br />
+
+## Notes: 
+For an example goto `example` folder. Consists of an image of network topology, corresponding input file made according to `input-format.txt` and output files for controlled and uncontrolled flooding.
 
 
