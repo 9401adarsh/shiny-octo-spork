@@ -12,7 +12,7 @@ class router{
     
     private: 
         std::string addr; //addr: stores addr by which router is identified
-        std::list<router*> adjRouters; //list of routers adjacent to this router
+        std::unordered_set<router*> adjRouters; //set of routers adjacent to this router
         std::unordered_set<int> seen; //set of seen packet_ids by the router, used for identifying previously forwarded packets
         static Settings settings; //static object of the singleton Settings class for access
 
@@ -28,15 +28,15 @@ class router{
         }
         router& operator = (router& src){
             this->addr = src.addr;
-            this->adjRouters.assign(src.adjRouters.begin(), src.adjRouters.end());
+            this->adjRouters = std::unordered_set< router* >(src.adjRouters.begin(), src.adjRouters.end());
             return *this;
         }
 
         //Function to put destination in this router's adjRouters and vice versa
         void makeNewConnection(router &destination)
         {
-            this->adjRouters.push_back(&destination);
-            destination.adjRouters.push_back(this);
+            this->adjRouters.insert(&destination);
+            destination.adjRouters.insert(this);
             //std::cout<<"Added "<<destination.getIPaddr()<<" to "<<this->getIPaddr()<<"'s adj List"<<std::endl;
             //destination.makeNewConnection(*this);
         }
@@ -70,7 +70,7 @@ class router{
             if(pckt.getDestIP() == this->getIPaddr()) //check if packet has reached destination
             {
                 std::cout<<"-----------------------\n";
-                std::cout<<"Status: Received.\nRouter: "<<this->getIPaddr()<<"\nPacket with ID: "<<pckt.getPacketID()<<"\nPayload: "<<pckt.getPayload()<<std::endl;
+                std::cout<<"Status: Received.\nRouter: "<<this->getIPaddr()<<"\nPacket with ID: "<<pckt.getPacketID()<<"\nOrigin: "<<pckt.getOrigin()<<"\nPayload: "<<pckt.getPayload()<<std::endl;
                 std::cout<<"-----------------------\n";
 
                 /*
