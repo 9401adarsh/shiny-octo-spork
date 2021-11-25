@@ -7,7 +7,7 @@ void makeAndrun()
     std::vector<router> routers;
     int numRouters; 
     
-    std::cout<<"Enter the number of routers: "<<std::endl;
+    //std::cout<<"Enter the number of routers: "<<std::endl;
     std::cin>>numRouters;
     std::unordered_map<std::string, int> addr_idx_map;
     
@@ -15,7 +15,7 @@ void makeAndrun()
     for(int i = 0; i < numRouters; i++)
     {
         std::string ip_addr;
-        std::cout<<"Enter IP Address for Router-"<<i<<": ";
+        //std::cout<<"Enter IP Address for Router-"<<i<<": ";
         std::cin>>ip_addr;
         addr_idx_map[ip_addr] = i;
         routers.push_back(router(ip_addr));
@@ -23,13 +23,13 @@ void makeAndrun()
     
     //getting all edges and setting up connections
     int numEdges; 
-    std::cout<<"Enter the number of edges/connections in the topology: "<<std::endl;
+    //std::cout<<"Enter the number of edges/connections in the topology: "<<std::endl;
     std::cin>>numEdges;
 
     while(numEdges--)
     {
         std::string addr1, addr2;
-        std::cout<<"To make an edge, enter the IP addresses of the 2 routers on 2 separate lines: "<<std::endl;
+        //std::cout<<"To make an edge, enter the IP addresses of the 2 routers on 2 separate lines: "<<std::endl;
         std::cin>>addr1;
         std::cin>>addr2;
 
@@ -40,7 +40,7 @@ void makeAndrun()
 
     //getting packets
     int numPackets;
-    std::cout<<"Enter the number of packets: "<<std::endl;
+    //std::cout<<"Enter the number of packets: "<<std::endl;
     std::cin>>numPackets;
 
     std::vector<packet<std::string>> packets(numPackets);
@@ -50,12 +50,12 @@ void makeAndrun()
         pckt.setOrigin("Host");
         
         std::string payload;
-        std::cout<<"Set Payload (String): ";
+        //std::cout<<"Set Payload (String): ";
         std::getline(std::cin >> std:: ws, payload);
         pckt.setPayload(payload);
 
         std::string dest_ip;
-        std::cout<<"Set Dest Address: ";
+        //std::cout<<"Set Dest Address: ";
         std::getline(std::cin >> std::ws, dest_ip);
         pckt.setDestIP(dest_ip);
 
@@ -63,7 +63,7 @@ void makeAndrun()
     }
 
     std::string src_ip;
-    std::cout<<"Enter Source Router IP Address: ";
+    //std::cout<<"Enter Source Router IP Address: ";
     std::cin>>src_ip;
 
     int src = addr_idx_map[src_ip];
@@ -76,7 +76,8 @@ void makeAndrun()
 
 int main()
 {
-    std::cout<<"Flooding Routing Algorithm - Controlled (Packets only forwarded once to prevent looping)"<<std::endl;
+    freopen("input.in", "r", stdin);
+    std::cout<<"Flooding Routing Algorithm"<<std::endl;
     extern int numOfTransmissions;
    /* router router1, router2, router3, router4, router5, router6, router7;
 
@@ -120,6 +121,7 @@ int main()
 
     */
     
+
     makeAndrun();
     std::cout<<std::endl;
     std::cout<<"Simulation is Over!! "<<std::endl;

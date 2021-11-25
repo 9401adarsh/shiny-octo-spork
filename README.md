@@ -19,12 +19,36 @@ The solution implemented to overcome looping:
 <br />
 
 ## Instructions to Run: 
-In project directionary, on terminal run: 
+Setting up input file, under project directory make `input.in` according to `input-format.txt`
+```
+<number of routers>
+[next 'num of routers' lines]
+<addresses of router>
+[end of router]
+<number of edges>
+[for each edge Ri - Rj]
+<address of router-i>
+<address of router-j>
+[end edges]
+<number of Packets>
+[for each packet pi]
+<payload>
+<destination router address>
+[end packets]
+``` 
+
+In project directory, on terminal run: 
 ```
 g++ settings.h packet.h router.h
 g++ driver.cpp -o driver
-./driver
+
+//Show output on terminal
+./driver 
+
+//Redirect output to a file output.out
+./driver > output.out
 ```
+
 <br />
 
 ## Default Configuration: 

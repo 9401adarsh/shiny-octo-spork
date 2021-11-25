@@ -1,0 +1,14 @@
+<number of routers>
+[next 'num of routers' lines]
+<addresses of router>
+[end of router]
+<number of edges>
+[for each edge Ri - Rj]
+<address of router-i>
+<address of router-j>
+[end edges]
+<number of Packets>
+[for each packet pi]
+<payload>
+<destination router address>
+[end packets]
